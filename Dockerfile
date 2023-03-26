@@ -6,7 +6,7 @@ RUN dnf update -y && dnf install -y podman
 
 RUN useradd -m runner
 
-RUN dnf install jq
+RUN dnf install -y jq
 
 RUN mkdir /home/runner/actions-runner && cd /home/runner/actions-runner\
 && curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz \
